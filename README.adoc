@@ -173,7 +173,20 @@ java com.craftinginterpreters.lox.Lox <プログラム>
 
 [source,console]
 ----
-ここに、Loxを実行したときのコマンドライン、その動作結果をテキストで貼り付ける。
+PS C:\Users\uenosono\craftinginterpreters\java\lox01-uenosonoj\codes> java com.craftinginterpreters.lox.Lox
+> {"aaa"bbb"}
+[line 1] Error: Unterminated string.
+[line 1] Error at '{': Expect expression.
+> a+b=c
+[line 1] Error at 'a': Expect expression.
+> 1+2*3
+(+ 1.0 (* 2.0 3.0))
+> (1+2)*3
+(* (group (+ 1.0 2.0)) 3.0)
+> (6+2)*3/4-1
+(- (/ (* (group (+ 6.0 2.0)) 3.0) 4.0) 1.0)
+> 10*2/5
+(/ (* 10.0 2.0) 5.0)
 ----
 
 作成できたら、一度「lox01」をコミットしなさい。
